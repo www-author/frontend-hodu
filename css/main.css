@@ -228,6 +228,7 @@ main {
     justify-content: center;
     gap: 50px;
     flex-wrap: wrap;
+    width: 1278px;
 }
 
 .show_more_text {
