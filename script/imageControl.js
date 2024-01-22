@@ -1,5 +1,6 @@
 const gridList = document.querySelector('.gallery_grid_wrap');
 const showMoreButton = document.querySelector('.show_more_btn');
+const stopMoreButton = document.querySelector('.stop_more_btn');
 const downloadButton = document.querySelector('.download_btn');
 
 /*cat image url (query parameters)*/
@@ -20,8 +21,7 @@ const requestOptions = {
     redirect: 'follow'
 };
 
-let isLoading = false;
-let maxDateLength = 50;
+let isBlock = false;
 
 const getCatImages = async (page, limit, mime_type) => {
     try {
@@ -47,6 +47,29 @@ const createImageElements = (jsonArray) => {
     });
 };
 
+const renderCatImage = async (mineType) => {
+    const response = await getCatImages(page, limit, mineType);
+    const jsonArray = await response.json();
+    await createImageElements(jsonArray);
+
+    if (page >= 2) {
+        gridList.style.cssText = `height: 828px;
+            overflow-y: scroll;
+        `;
+        const hideElements = gridList.parentElement.querySelectorAll('[class^="show_more_"]');
+        hideElements.forEach(element => {
+            element.style.display = 'none';
+        });
+
+        stopMoreButton.style.cssText = `display: block;
+            margin-top : 30px;
+        `;
+
+        limit = 15;
+        intersectionObserver();
+    }
+};
+
 const downloadFile = (blob, fileType) => {
     try {
         let date = new Date();
@@ -60,9 +83,9 @@ const downloadFile = (blob, fileType) => {
             hour12: false
         };
         let nowDate= new Intl
-                .DateTimeFormat('ko-KR', dateOptions)
-                .format(date)
-                .replace(/[. ]|[: ]/g, '');
+            .DateTimeFormat('ko-KR', dateOptions)
+            .format(date)
+            .replace(/[. ]|[: ]/g, '');
 
         const url =  window.URL.createObjectURL(blob);
         const anchor = document.createElement('a');
@@ -76,21 +99,6 @@ const downloadFile = (blob, fileType) => {
     }
 };
 
-const renderCatImage = async (mineType) => {
-    const response = await getCatImages(page, limit, mineType);
-    const jsonArray= await response.json();
-    await createImageElements(jsonArray);
-
-    if (page === 1) return;
-
-    const hideElements = gridList.parentElement.querySelectorAll('[class^="show_more_"]');
-    hideElements.forEach(element => {
-        element.style.display = 'none';
-    });
-    limit = 15;
-    createObserver();
-}
-
 const downloadImageFile = async (fileNumber, fileType) => {
     const response = await getCatImages(0, 1, 'jpg');
     const binaryImageData = await response.blob();
@@ -102,29 +110,44 @@ const downloadImageFile = async (fileNumber, fileType) => {
 };
 
 // 최초 이미지 렌더링
-renderCatImage('gif').then(() => console.log('Initial image load successful'));
+renderCatImage('gif').then(() => page++);
 
-const createObserver = () => {
+const intersectionObserver = () => {
     let options = {
-        //root: document.querySelector('#gallery'),
+        root: document.querySelector('#gallery'),
         rootMargin: '0px',
-        threshold: 0.3
+        threshold: 1.0
     };
 
     const observer = new IntersectionObserver((entries) => {
-        debugger;
         entries.forEach(entry => {
-            if (!entry.isIntersecting || entries[0].target.querySelectorAll('li').length >= maxDateLength)
+            if (!entry.isIntersecting || isBlock)
                 return;
 
             renderCatImage('gif').then(() => page++);
         });
     }, options);
 
+    if (isBlock) {
+        observer.disconnect();
+        return;
+    }
     observer.observe(gridList);
 };
 
 
-showMoreButton.addEventListener('click', createObserver);
+const stopInfinityScroll = () => {
+    isBlock = true;
+    stopMoreButton.style.display = 'none';
+    // TODO refeactor Stop 버튼 움직임 개선
+    intersectionObserver();
 
+    const showElements = gridList.parentElement.querySelectorAll('[class^="show_more_"]');
+    showElements.forEach(element => {
+        element.style.display = 'block';
+    });
+}
+
+showMoreButton.addEventListener('click', intersectionObserver);
+stopMoreButton.addEventListener('click', stopInfinityScroll);
 downloadButton.addEventListener('click', () => downloadImageFile(1, 'jpg'));
