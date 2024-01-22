@@ -226,9 +226,9 @@ main {
 .gallery_grid_wrap {
     display: flex;
     justify-content: center;
-    gap: 50px;
     flex-wrap: wrap;
     width: 1278px;
+    gap: 50px;
 }
 
 .show_more_text {
@@ -239,6 +239,14 @@ main {
 }
 
 .show_more_btn {
+    width: 143px;
+    margin-bottom: 80px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.stop_more_btn {
+    display: none;
     width: 143px;
     margin-bottom: 80px;
     font-size: 16px;
@@ -256,12 +264,12 @@ hr {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 68px 0 181px 0;
+    margin: 48px 0 0 0;
 }
 
 #location_map h2 {
     margin-bottom: 20px;
-    margin-left: -1000px;
+    margin-left: -1010px;
     font-size: 36px;
     font-weight: 700;
     line-height: 45px;
@@ -271,7 +279,7 @@ hr {
 
 #location_map p {
     margin-bottom: 48px;
-    margin-left: -970px;
+    margin-left: -1030px;
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
@@ -376,10 +384,13 @@ hr {
 /* -- main style end -- */
 
 /* -- footer style start -- */
+footer .img_wrap {
+    height: 340px;
+}
 
 footer .img_wrap img {
     width: 100%;
-    height: 340px;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -397,10 +408,10 @@ footer .site_logo_wrap img {
 }
 
 .top_btn_area {
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
-    transform: translate(-30px, -40px);
+    display: none;
+    position: fixed;
+    right: 24px;
+    bottom: 209px;
     cursor: pointer;
 }
 
