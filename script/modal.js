@@ -1,10 +1,10 @@
-const body = document.querySelector('body');
+import {topButtonArea} from "./scrollTop.js"
+const body = document.body;
 const modal = document.querySelector('#modal');
 const emailForm = document.querySelector('.email_form');
 const emailInput = document.getElementById('input_your_email');
 const modalCloseButton = document.querySelector('.modal_close_btn');
 const subscribeButton = document.querySelector('.subscribe_btn');
-const topButtonArea = document.querySelector('.top_btn_area');
 const topButton = document.querySelector('.top_btn');
 
 const hide = () => {
