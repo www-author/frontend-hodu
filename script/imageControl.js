@@ -117,7 +117,7 @@ const createObserver = () => {
             if (!entry.isIntersecting || entries[0].target.querySelectorAll('li').length >= maxDateLength)
                 return;
 
-            renderCatImage().then(() => page++);
+            renderCatImage('gif').then(() => page++);
         });
     }, options);
 
