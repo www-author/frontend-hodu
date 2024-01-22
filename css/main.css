@@ -1,0 +1,482 @@
+/* -- common style start -- */
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GangwonEduPowerExtraBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GangwonEduHyeonokT_OTFMediumA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduHyeonokT_OTFMediumA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family:'DNFBitBitv2';
+    font-style:normal;font-weight:400;src:url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')
+}
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Pretendard-Regular';
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+p {
+    font-family: 'GangwonEduHyeonokT_OTFMediumA';
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    height: 50px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: 700;
+    background-color: #D97652;
+    color: #FFFFFF;
+}
+
+/* -- common style end -- */
+
+/* -- header style start -- */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2E9D8;
+}
+
+header .site_logo_wrap {
+    width: 130px;
+    height: 40px;
+    margin: 31px 640px 31px 100px;
+}
+
+header nav {
+    margin: 31px 49px 31px 50px;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 439px;
+}
+
+header li:not(.download) {
+    box-sizing: border-box;
+}
+
+header a {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #000000;
+}
+
+header .download_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 140px;
+    margin-left: 19px;
+    border: none;
+    border-radius: 40px;
+    background-color: #D97652;
+    color: #FFFFFF;
+}
+/* -- header style end -- */
+
+
+/* -- main style start -- */
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+#jumbotron {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2E9D8;
+    color: #000000;
+}
+
+#jumbotron .intro_wrap {
+    display: flex;
+    flex-direction: column;
+    margin: 302px 40px 200px 10px;
+}
+
+.intro_wrap h2 {
+    font-size: 48px;
+    line-height: 60px;
+    font-family: 'DNFBitBitv2';
+}
+
+.intro_wrap h3 {
+    font-size: 48px;
+    line-height: 60px;
+    margin-bottom: 40px;
+}
+
+.intro_wrap h3 > span {
+    font-family: 'DNFBitBitv2';
+}
+
+#jumbotron p {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 40px;
+}
+
+#jumbotron .download_btn {
+    width: 140px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.img_wrap img {
+    width: 415px;
+    height: 766px;
+    margin-bottom: -30px;
+}
+
+#profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile_picture_wrap {
+    margin: 80px 0 0 180px;
+}
+
+.profile_picture_wrap img {
+    width: 660px;
+    height: 390px;
+    border-radius: 30px;
+    box-shadow: 30px 30px 40px 0 #FAE5D3;;
+}
+
+.explain {
+    margin: 80px 200px 120px 100px;
+}
+
+.explain span {
+    margin: 92px 0 20px 0;
+    font-size: 36px;
+    line-height: 45px;
+    font-family: 'GangwonEduPowerExtraBoldA';
+}
+
+.explain:not(span) {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+#gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+    text-align: center;
+}
+
+#gallery h2 {
+    margin-bottom: 40px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+    font-family: 'DNFBitBitv2';
+    color: #D97652;
+}
+
+.explain_gallery {
+    margin-bottom: 88px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.gallery_grid_wrap {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.show_more_text {
+    margin: 100px 0 28px 0;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.show_more_btn {
+    width: 143px;
+    margin-bottom: 80px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+hr {
+    width: 1278px;
+    height: 1px;
+    background-color: #C4C4C4;
+}
+
+#location_map {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 68px 0 181px 0;
+}
+
+#location_map h2 {
+    margin-bottom: 20px;
+    margin-left: -1000px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 45px;
+    text-align: left;
+    font-family: 'GangwonEduPowerExtraBoldA';
+}
+
+#location_map p {
+    margin-bottom: 48px;
+    margin-left: -970px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    color: #606367;
+}
+
+#map {
+    width: 1278px;
+    height: 520px;
+    border-radius: 12px;
+}
+
+#subscription {
+    display: flex;
+    justify-content: center;
+}
+
+.subscription_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 100px;
+    width: 1280px;
+    height: 200px;
+    border-radius: 30px;
+    background-color: #263140;
+}
+
+.explain_text_wrap {
+    margin: 0 153px 0 58px;
+}
+
+.subscription_container h2 {
+    margin-bottom: 18px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 45px;
+    font-family: 'DNFBitBitv2';
+    color: #FFFFFF;
+}
+
+.subscription_container p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #F2E9D8;
+    font-family: 'GangwonEduPowerExtraBoldA';
+}
+
+.subscription_container span {
+    font-size: 18px;
+    font-family: 'GangwonEduHyeonokT_OTFMediumA';
+}
+
+.subscription_container .email_form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 530px;
+    height: 60px;
+    margin-right: 58px;
+    border-radius: 60px;
+    background-color: #FFFFFF;
+}
+
+.email_form img {
+    width: 24px;
+    height: 24px;
+    margin-left: 28px;
+}
+
+#input_your_email {
+    display: flex;
+    flex-basis: 300px;
+    width: 200px;
+    height: 20px;
+    margin-left: 16px;
+    border: none;
+    background-color: #FFFFFF;
+}
+
+#input_your_email::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+}
+
+#input_your_email:focus {
+    outline: none;
+}
+
+.subscribe_btn {
+    width: 135px;
+    margin: 5px 0 5px 15px;
+    border-radius: 40px;
+    font-size: 16px;
+    line-height: 20px;
+}
+/* -- main style end -- */
+
+/* -- footer style start -- */
+
+footer .img_wrap img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    height: 160px;
+}
+
+footer .site_logo_wrap img {
+    width: 226px;
+    height: 70px;
+}
+
+.top_btn_area {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    transform: translate(-30px, -40px);
+    cursor: pointer;
+}
+
+.top_btn_area:hover img {
+    content: url("../img/active_arrow_up.png");
+}
+
+.top_btn {
+    width: 50px;
+    height: 50px;
+}
+
+
+.sns_link_area {
+    display: flex;
+    justify-content: space-between;
+    width: 228px;
+    height: 42px;
+    margin-left: 700px;
+}
+
+.sns_link_area img {
+    width: 42px;
+}
+/* -- footer style end -- */
+
+/* -- modal style start -- */
+#modal {
+    display: none;
+}
+
+.modal_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 400px;
+    border-radius: 30px;
+    box-shadow: 0 0 30px 0 #00000033;
+    background-image: url("../img/modal-background.png");
+}
+.modal_container .img_wrap {
+    width: 110px;
+    height: 112px;
+    margin-bottom: 24px;
+}
+
+.modal_container img {
+    width: auto;
+    height: auto;
+}
+
+.modal_container h1 {
+    margin-bottom: 12px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 45px;
+    color: #D97652;
+}
+
+.modal_container p {
+    text-align: center;
+    margin-bottom: 38px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.modal_close_btn {
+    width: 183px;
+    font-size: 16px;
+    line-height: 20px;
+}
+/* -- modal style end -- */
