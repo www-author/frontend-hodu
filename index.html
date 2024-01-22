@@ -5,10 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--IE 호환성 지원을 위해 추가-->
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>호두를 소개합니다!</title>
-        <link rel="icon" type="image/png" href="./img/header-logo.png" sizes="16x16">
-        <link rel="icon" type="image/png" href="./img/header-logo.png" sizes="32x32">
-        <link rel="icon" type="image/png" href="./img/header-logo.png" sizes="64x64">
+        <title>호두네로 놀러와!</title>
+        <link rel="icon" type="image/png" href="./img/modal-img-cat.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="./img/modal-img-cat.png" sizes="64x64">
+        <link rel="icon" type="image/png" href="./img/modal-img-cat.png" sizes="16x16">
         <link rel="stylesheet" href="./css/reset.css">
         <link rel="stylesheet" href="./css/main.css">
     </head>
@@ -37,7 +37,7 @@
                     </div>
                 </div>
                 <div class="img_wrap">
-                    <img src="./img/img_cat_png.png" alt="박스를 쓰고있는 고양이 호두" role="img">
+                    <img src="./img/img-box-cat.png" alt="박스를 쓰고있는 고양이 호두" role="img">
                 </div>
             </section>
             <section id="profile">
@@ -60,13 +60,16 @@
                 <p class="show_more_text">계속해서 나와 내 친구들의 일상 사진들 구경할래?</p>
                 <div class="btn_wrap">
                     <button class="show_more_btn">Show more</button>
+                    <button class="stop_more_btn">Stop more</button>
                 </div>
             </section>
             <hr>
-            <!--TODO 문구 수정 및 카카오 맵을 이용한 현재 위치를 텍스트로 반환할 것!-->
             <section id="location_map">
-                <h2>Where you’ll be</h2>
-                <p>330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea</p>
+                <h2>호두씨는 어디에?</h2>
+                <p>
+                    서울대 입구 보안관 호두씨가 주름잡는 구역입니다!<br>
+                    동에번쩍 서에번쩍 호두씨는 바쁘답니다!
+                </p>
                 <div id="map"></div>
             </section>
             <section id="subscription">
@@ -122,7 +125,7 @@
                     <img src="./img/modal-img-cat.png" alt="부끄럼쟁이 고양이 호두" role="img">
                 </div>
                 <h1>Thank you!</h1>
-                <p>추가한다옹! 너는 이제 나의 사진들을 전송 받을 수 있게됬다옹!<br>아래 버튼을 누르면 카드가 닫힐 것이다옹!</p>
+                <p>추가한다옹! 너는 이제 나의 사진들을 전송 받을 수 있다옹!<br>아래 버튼을 누르면 카드가 닫힐 것이다옹!</p>
                 <div class="btn_wrap">
                     <button class="modal_close_btn">OK! I Love HODU</button>
                 </div>
@@ -131,6 +134,7 @@
         <script type="text/javascript" src="script/imageControl.js"></script>
         <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=718e9900527be8ff95fff8c2fe2e6454"></script>
         <script type="text/javascript" src="script/map.js"></script>
-        <script type="text/javascript" src="./script/modal.js"></script>
+        <script type="module" src="./script/scrollTop.js"></script>
+        <script type="module" src="./script/modal.js" ></script>
     </body>
 </html>
