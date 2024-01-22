@@ -1,8 +1,16 @@
-let mapContainer = document.getElementById('map'), // 지도를 표시할 div
+let mapContainer = document.getElementById('map'),
     mapOption = {
-        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
+        center: new kakao.maps.LatLng(37.481239, 126.952748),
+        level: 3
     };
 
-// 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
- let map = new kakao.maps.Map(mapContainer, mapOption);
+let iwContent = `<div style="padding:15px;">호두네 동네 🐈</div>`,
+    iwPosition = new kakao.maps.LatLng(37.481239, 126.952748),
+    iwRemoveable = true;
+
+let infowindow = new kakao.maps.InfoWindow({
+    map: new kakao.maps.Map(mapContainer, mapOption),
+    position : iwPosition,
+    content : iwContent,
+    removable : iwRemoveable
+});
