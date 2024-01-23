@@ -1,7 +1,8 @@
 const gridList = document.querySelector('.gallery_grid_wrap');
 const showMoreButton = document.querySelector('.show_more_btn');
 const stopMoreButton = document.querySelector('.stop_more_btn');
-const downloadButton = document.querySelector('.download_btn');
+const downloadHeaderButton = document.querySelector('a[class="download_btn"]');
+const downloadMainButton = document.querySelector('button[class="download_btn"]');
 
 /*cat image url (query parameters)*/
 const endpoint = 'https://api.thecatapi.com/v1/images/search';
@@ -130,6 +131,7 @@ const intersectionObserver = () => {
 
     if (isBlock) {
         observer.disconnect();
+        isBlock = false;
         return;
     }
     observer.observe(gridList);
@@ -150,4 +152,5 @@ const stopInfinityScroll = () => {
 
 showMoreButton.addEventListener('click', intersectionObserver);
 stopMoreButton.addEventListener('click', stopInfinityScroll);
-downloadButton.addEventListener('click', () => downloadImageFile(1, 'jpg'));
+downloadHeaderButton.addEventListener('click', () => downloadImageFile(1, 'jpg'));
+downloadMainButton.addEventListener('click', () => downloadImageFile(1, 'gif'));
