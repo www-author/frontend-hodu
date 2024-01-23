@@ -59,14 +59,13 @@ https://www-author.github.io/frontend-hodu/
 
 자세한 내용 확인은 :link:[배포주소](https://www-author.github.io/frontend-hodu/) 여기를 클릭하시면 확인 가능합니다.
 
-## :sparkles: 기능
+## :sparkles: 기능 목록
 
-```
-:pushpin: Kakao Map, 고양이 사진 외부 API를 연동한 이미지 조회 
-:pushpin: 파일(이미지) 다운로드
-:pushpin: 탑 버튼을 통한 페이지 상단 이동
-:pushpin: gallery 화면 무한 스크롤
-```
+:pushpin: Kakao Map, 고양이 사진 외부 API를 연동한 이미지 조회 <br>
+:pushpin: 파일(이미지) 다운로드<br>
+:pushpin: 탑 버튼을 통한 페이지 상단 이동<br>
+:pushpin: gallery 화면 무한 스크롤<br>
+
 
 
 ## :pencil: 프로젝트 회고 
