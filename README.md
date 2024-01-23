@@ -66,6 +66,11 @@ https://www-author.github.io/frontend-hodu/
 :pushpin: 탑 버튼을 통한 페이지 상단 이동<br>
 :pushpin: gallery 화면 무한 스크롤<br>
 
+## :electric_plug: 사용 API 
+* [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
+* [KakaoMapAPI](https://apis.map.kakao.com/web/sample/)
+* [thecatapi](https://developers.thecatapi.com/)
+
 
 
 ## :pencil: 프로젝트 회고 
