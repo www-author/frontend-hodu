@@ -92,8 +92,6 @@ const getFileName = (fileType) => {
 };
 
 const createFile = (data, fileName) => {
-    debugger;
-
     const url = window.URL.createObjectURL(data);
     const anchor = document.createElement('a');
     anchor.href = url;
@@ -144,18 +142,17 @@ const intersectionObserver = () => {
         });
     }, options);
 
+    observer.observe(gridList);
+
     if (isBlock) {
         observer.disconnect();
-        isBlock = false;
-        return;
     }
-    observer.observe(gridList);
 };
 
 
 const stopInfinityScroll = () => {
-    isBlock = true;
     stopMoreButton.style.display = 'none';
+    isBlock = true;
     intersectionObserver();
 
     const showElements = gridList.parentElement.querySelectorAll('[class^="show_more_"]');
