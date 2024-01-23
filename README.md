@@ -7,7 +7,7 @@
 
 * Html, Css로 웹 사이트의 레이아웃과 디자인 구성과 JavaScript를 통해 웹 사이트에 필요한 기능을 구현한다.
 
-### 프로젝트 일정 
+## :calendar: 프로젝트 진행기간 
  * 2024-01-16 ~ 2024-01-23
 
 ## :link: 배포 주소 
@@ -65,6 +65,11 @@ https://www-author.github.io/frontend-hodu/
 :pushpin: 파일(이미지) 다운로드<br>
 :pushpin: 탑 버튼을 통한 페이지 상단 이동<br>
 :pushpin: gallery 화면 무한 스크롤<br>
+
+## :electric_plug: 사용 API 
+* [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
+* [KakaoMapAPI](https://apis.map.kakao.com/web/sample/)
+* [thecatapi](https://developers.thecatapi.com/)
 
 
 
