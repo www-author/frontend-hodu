@@ -170,21 +170,21 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 80px;
 }
 
 .profile_picture_wrap {
-    margin: 80px 0 0 180px;
+    width: 660px;
+    height: 390px;
 }
 
 .profile_picture_wrap img {
-    width: 660px;
-    height: 390px;
     border-radius: 30px;
     box-shadow: 30px 30px 40px 0 #FAE5D3;;
 }
 
 .explain {
-    margin: 80px 200px 120px 100px;
+    margin-left: 110px;
 }
 
 .explain span {
