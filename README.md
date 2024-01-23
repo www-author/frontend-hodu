@@ -1,4 +1,4 @@
-# :heart_eyes_cat: frontend-hodu :heart_eyes_cat:
+![스크린샷 2024-01-23 오전 11 04 00](https://github.com/www-author/frontend-hodu/assets/148677085/390c94d6-866e-4d9e-9a13-5f07b357560f)# :heart_eyes_cat: frontend-hodu :heart_eyes_cat:
 [백엔드 개발자 오르미 4기] Frontend Project  
 
 ## :book: 프로젝트 개요 
@@ -53,9 +53,9 @@ https://www-author.github.io/frontend-hodu/
 ## :art: 화면 구성
 |            메인             |
 |:-------------------------:|
-| ![스크린샷 2024-01-23 오전 11.03.02.png](..%2F..%2F..%2F..%2F..%2FUsers%2Fjepark%2FDesktop%2F%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202024-01-23%20%EC%98%A4%EC%A0%84%2011.03.02.png)|
-|![스크린샷 2024-01-23 오전 11.03.27.png](..%2F..%2F..%2F..%2F..%2FUsers%2Fjepark%2FDesktop%2F%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202024-01-23%20%EC%98%A4%EC%A0%84%2011.03.27.png)
-|![스크린샷 2024-01-23 오전 11.04.00.png](..%2F..%2F..%2F..%2F..%2FUsers%2Fjepark%2FDesktop%2F%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202024-01-23%20%EC%98%A4%EC%A0%84%2011.04.00.png)|
+|<img width="913" alt="스크린샷 2024-01-23 오전 11 03 02" src="https://github.com/www-author/frontend-hodu/assets/148677085/7a937ac0-d48c-4f44-bb45-43e4d66abfbe">|
+<img width="743" alt="스크린샷 2024-01-23 오전 11 03 27" src="https://github.com/www-author/frontend-hodu/assets/148677085/02ddc123-2e78-407a-9553-ebc56c5764a1">|
+<img width="743" alt="스크린샷 2024-01-23 오전 11 04 00" src="https://github.com/www-author/frontend-hodu/assets/148677085/9d90d23f-1f50-4a5d-921a-9158e1908940">|
 
 자세한 내용 확인은 [:link: 배포주소](https://www-author.github.io/frontend-hodu/) 여기를 클릭하시면 확인 가능합니다.
 
@@ -74,7 +74,7 @@ https://www-author.github.io/frontend-hodu/
 첫 프로젝트를 진행하면서, 관련 기술들을 학습하고 적용하는 과정과 그외 프로젝트 정리 등 전체적인 일감 분류와 시간을 산정하는 것의 중요성을 알게되었습니다. 또한, 모듈화, 디렉토리 구조 등의 고찰을 할 수 있었던 시간이였습니다.<br>
 추후 프로젝트를 진행 전에 일감을 프로젝트 소요 기간에 따라 분류하고 진행할 것 같습니다. 
 
-**앞으로도 화이팅...!**
+__앞으로도 화이팅...!__
 
 
 
