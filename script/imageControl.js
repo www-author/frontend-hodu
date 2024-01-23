@@ -71,43 +71,58 @@ const renderCatImage = async (mineType) => {
     }
 };
 
-const downloadFile = (blob, fileType) => {
-    try {
-        let date = new Date();
-        let dateOptions = {
-            year: 'numeric',
-            month: '2-digit',
-            day: '2-digit',
-            hour: '2-digit',
-            minute: '2-digit',
-            second: '2-digit',
-            hour12: false
-        };
-        let nowDate= new Intl
-            .DateTimeFormat('ko-KR', dateOptions)
-            .format(date)
-            .replace(/[. ]|[: ]/g, '');
 
-        const url =  window.URL.createObjectURL(blob);
-        const anchor = document.createElement('a');
-        anchor.href = url;
-        anchor.download = `${nowDate}.${fileType}`;
-        anchor.click();
-        anchor.remove();
-        window.URL.revokeObjectURL(anchor.href);
+const getFileName = (fileType) => {
+    let date = new Date();
+    let dateOptions = {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+    };
+    let nowDate= new Intl
+        .DateTimeFormat('ko-KR', dateOptions)
+        .format(date)
+        .replace(/[. ]|[: ]/g, '');
+
+    return `${nowDate}.${fileType}`;
+};
+
+const createFile = (data, fileName) => {
+    debugger;
+
+    const url = window.URL.createObjectURL(data);
+    const anchor = document.createElement('a');
+    anchor.href = url;
+    anchor.download = getFileName(fileName);
+    anchor.click();
+    anchor.remove();
+    window.URL.revokeObjectURL(url);
+};
+
+const createFileFromJson = (data, fileName) => {
+    const anchor = document.createElement('a');
+    anchor.href = data?.url;
+    anchor.download = fileName;
+    anchor.click();
+    anchor.remove();
+};
+
+const downloadFile = (data, fileType) => {
+    try {
+        createFile(data, getFileName(fileType));
     } catch (e) {
         console.error('파일 다운로드에 실패하였습니다.', e);
     }
 };
 
-const downloadImageFile = async (fileNumber, fileType) => {
-    const response = await getCatImages(0, 1, 'jpg');
-    const binaryImageData = await response.blob();
-    let numberOfCreatedFiles = 0;
-    while (numberOfCreatedFiles !== fileNumber) {
-        await downloadFile(binaryImageData, fileType);
-        numberOfCreatedFiles++;
-    }
+const downloadImageFile = async (fileType) => {
+    const response = await getCatImages(0, 1, fileType);
+    const blob = await response.blob();
+    await downloadFile(blob, fileType);
 };
 
 // 최초 이미지 렌더링
@@ -118,7 +133,7 @@ const intersectionObserver = () => {
         root: document.querySelector('#gallery'),
         rootMargin: '0px',
         threshold: 1.0
-    };
+    }
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -141,7 +156,6 @@ const intersectionObserver = () => {
 const stopInfinityScroll = () => {
     isBlock = true;
     stopMoreButton.style.display = 'none';
-    // TODO refeactor Stop 버튼 움직임 개선
     intersectionObserver();
 
     const showElements = gridList.parentElement.querySelectorAll('[class^="show_more_"]');
@@ -152,5 +166,5 @@ const stopInfinityScroll = () => {
 
 showMoreButton.addEventListener('click', intersectionObserver);
 stopMoreButton.addEventListener('click', stopInfinityScroll);
-downloadHeaderButton.addEventListener('click', () => downloadImageFile(1, 'jpg'));
-downloadMainButton.addEventListener('click', () => downloadImageFile(1, 'gif'));
+downloadHeaderButton.addEventListener('click', () => downloadImageFile('jpg'));
+downloadMainButton.addEventListener('click', () => downloadImageFile('jpg'));
