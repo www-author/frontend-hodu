@@ -57,7 +57,7 @@ https://www-author.github.io/frontend-hodu/
 <img width="743" alt="스크린샷 2024-01-23 오전 11 03 27" src="https://github.com/www-author/frontend-hodu/assets/148677085/02ddc123-2e78-407a-9553-ebc56c5764a1">|
 <img width="743" alt="스크린샷 2024-01-23 오전 11 04 00" src="https://github.com/www-author/frontend-hodu/assets/148677085/9d90d23f-1f50-4a5d-921a-9158e1908940">|
 
-자세한 내용 확인은 [:link: 배포주소](https://www-author.github.io/frontend-hodu/) 여기를 클릭하시면 확인 가능합니다.
+자세한 내용 확인은 :link:[배포주소](https://www-author.github.io/frontend-hodu/) 여기를 클릭하시면 확인 가능합니다.
 
 ## :sparkles: 기능
 
