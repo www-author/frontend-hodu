@@ -1,4 +1,4 @@
-![스크린샷 2024-01-23 오전 11 04 00](https://github.com/www-author/frontend-hodu/assets/148677085/390c94d6-866e-4d9e-9a13-5f07b357560f)# :heart_eyes_cat: frontend-hodu :heart_eyes_cat:
+# :heart_eyes_cat: frontend-hodu :heart_eyes_cat:
 [백엔드 개발자 오르미 4기] Frontend Project  
 
 ## :book: 프로젝트 개요 
